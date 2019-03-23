@@ -1,3 +1,14 @@
 <template>
-  <h2>Snippets Setup</h2>
+  <div>
+    <AppHeader/>
+  </div>
 </template>
+
+<script>
+  import AppHeader from '@/components/AppHeader'
+
+  export default {
+    name: 'App',
+    components: { AppHeader }
+  }
+</script>
