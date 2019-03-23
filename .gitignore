@@ -20,5 +20,6 @@ yarn-error.log*
 *.sln
 *.sw*
 
-# Me
+# Snippets
 dev
+api/database/snippets.sqlite3
