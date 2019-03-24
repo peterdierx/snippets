@@ -19,6 +19,12 @@ const db = new sqlite.Database( './database/snippets.sqlite3', sqlite.OPEN_READW
       console.log( 'CREATE INDEX title' )
       db.run( "CREATE INDEX snippets_title_index ON snippets ( title )" )
       console.log( 'OK' )
+      // SEED RECORDS
+      console.log( 'INSERT SEED RECORDS' )
+      db.run( "INSERT INTO snippets ( title, content ) VALUES ( 'du- sh',     'disk usage dir' )" )
+      db.run( "INSERT INTO snippets ( title, content ) VALUES ( 'empty file', '> sudo' )" )
+      db.run( "INSERT INTO snippets ( title, content ) VALUES ( 'npm latest', 'whatever bro' )" )
+      console.log( 'OK' )
     })
   }
 })

@@ -1,11 +1,14 @@
 // VUE
 import Vue    from 'vue'
-import App    from '@/App.vue'
+import App    from '@/App'
 import router from '@/router'
 import store  from '@/store'
 
 // BULMA CSS
 import 'bulma/css/bulma.css'
+
+// UTILS
+import directives from '@/directives.js'
 
 // CONFIG
 Vue.config.productionTip = false
