@@ -88,6 +88,15 @@ api.delete( '/snippets/:id', ( request, response ) => {
   })
 })
 
+// SEARCH
+api.get( '/snippets/search/:title', ( request, response ) => {
+  const title  = request.params.title
+  const params = `%${ title }%`
+  db.all( "SELECT * FROM snippets WHERE title LIKE ? ORDER BY title LIMIT 11", params, ( error, rows ) => {
+    response.json( rows )
+  })
+})
+
 // PAGE
 api.get( '/snippets/page/:number', ( request, response ) => {
   const page = request.params.number * 10

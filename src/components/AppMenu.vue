@@ -12,9 +12,9 @@
                 <button class='button is-link'>New</button>
               </router-link>
             </p>
-            <p class='control'>
-              <input class='input' placeholder='Search...'>
-            </p>
+            <form @submit.prevent='searchSnippets'>
+              <input v-model='search' class='input' placeholder='Search...' autocomplete='off'>
+            </form>
           </div>
         </div>
       </div>
@@ -25,11 +25,20 @@
 <script>
   export default {
     name: 'AppMenu',
+    data() {
+      return {
+        search: null
+      }
+    },
     methods: {
       snippets() {
         this.$store.commit( 'RESET_PAGE' )
         this.$store.dispatch( 'snippets' )
         this.$router.push( '/' )
+      },
+      searchSnippets() {
+        this.$store.dispatch( 'search', this.search )
+        this.search = null
       }
     }
   }

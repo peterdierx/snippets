@@ -17,6 +17,9 @@ export default {
   deleteSnippet( id ) {
     return apiClient.delete( `/snippets/${ id }` )
   },
+  searchSnippets( title ) {
+    return apiClient.get( `/snippets/search/${ title }` )  
+  },
   paginate( pageNumber ) {
     return apiClient.get( `/snippets/page/${ pageNumber }` )
   }

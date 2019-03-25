@@ -30,6 +30,11 @@ export default {
   async paginate( { commit }, page ) {
     const response = await api.paginate( page )
     commit( 'SNIPPETS', response.data )
-  }
+  },
   
+  // SEARCH
+  async search( { commit }, title ) {
+    const response = await api.searchSnippets( title )
+    commit( 'SNIPPETS', response.data )
+  }
 }
