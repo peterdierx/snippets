@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node api.js"
+    "start": "node api"
   },
   "dependencies": {
     "cors": "^2.8.5",
