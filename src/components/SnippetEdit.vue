@@ -71,8 +71,7 @@
     },
     methods: {
       loadSnippet( recid ) {
-        const snippet = this.$store.state.snippets.find( snippet => snippet.id === recid )
-        this.snippet  = { ...snippet }
+        this.snippet = this.$store.state.snippets.find( snippet => snippet.id === recid )
       },
       update() {
         if ( this.snippet.title ) {
