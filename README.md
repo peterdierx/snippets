@@ -1,34 +1,25 @@
-# snippets
+# Snippets
 
-## Project setup
-```
-yarn install
-```
+<p align='center'><img src='screenshot.png'></p>
 
-### Compiles and hot-reloads for development
+### Setup
 ```
-yarn run serve
+> yarn install
 ```
 
-### Compiles and minifies for production
+### Snippets API
 ```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
+> cd snippets/api
+> node api
+Connected to SQLite Database snippets...
+Server listening at http://localhost:4567
 ```
 
-### Lints and fixes files
+### Snippets Vue
 ```
-yarn run lint
+New terminal window
+> cd snippets
+> yarn serve
+App running at:
+- Local: http://localhost:8080/
 ```
-
-### Run your unit tests
-```
-yarn run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
