@@ -34,7 +34,7 @@
       snippets() {
         this.$store.commit( 'RESET_PAGE' )
         this.$store.dispatch( 'snippets' )
-        this.$router.push( '/' )
+        this.$router.push( '/', () => {} )
       },
       searchSnippets() {
         this.$store.dispatch( 'search', this.search )
